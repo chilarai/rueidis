@@ -1,6 +1,6 @@
 module github.com/redis/rueidis
 
-go 1.21
+go 1.19
 
 require (
 	github.com/onsi/gomega v1.34.1
