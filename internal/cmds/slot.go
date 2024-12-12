@@ -102,6 +102,10 @@ var crc16tab = [256]uint16{
 }
 
 func crc16(key string) (crc uint16) {
+	if key == "" {
+		return 0 // Line 104
+	}
+
 	for i := 0; i < len(key); i++ {
 		crc = (crc << 8) ^ crc16tab[(uint8(crc>>8)^key[i])&0x00FF]
 	}
